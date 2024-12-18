@@ -35,7 +35,7 @@ app.get('/resolve-mdns', async (req, res) => {
       responseSent = true;
   
       try {
-        await axios.post('http://OzCambio.pythonanywhere.com/store-mdns', { answers: allAnswers });
+        await axios.post('https://OzCambio.pythonanywhere.com/store-mdns', { answers: allAnswers });
         console.log('All data sent to Python backend:', allAnswers);
       } catch (error) {
         console.error('Error sending data to Python backend:', error);
